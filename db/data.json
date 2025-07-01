@@ -1,0 +1,104 @@
+{
+  "products": [
+    {
+      "variantId": "v1",
+      "productId": 1,
+      "name": "T-Shirt Basic",
+      "description": "Basic cotton t-shirt",
+      "color": "Red",
+      "price": 99.9,
+      "thumbnail": "https://via.placeholder.com/150/FF0000/FFFFFF?text=Red",
+      "likeCount": 10
+    },
+    {
+      "variantId": "v2",
+      "productId": 1,
+      "name": "T-Shirt Basic",
+      "description": "Basic cotton t-shirt",
+      "color": "Blue",
+      "price": 109.9,
+      "thumbnail": "https://via.placeholder.com/150/0000FF/FFFFFF?text=Blue",
+      "likeCount": 5
+    },
+    {
+      "variantId": "v3",
+      "productId": 2,
+      "name": "Hoodie Classic",
+      "description": "Warm and comfy hoodie",
+      "color": "Black",
+      "price": 149.9,
+      "thumbnail": "https://via.placeholder.com/150/000000/FFFFFF?text=Black",
+      "likeCount": 15
+    },
+    {
+      "variantId": "v4",
+      "productId": 2,
+      "name": "Hoodie Classic",
+      "description": "Warm and comfy hoodie",
+      "color": "Gray",
+      "price": 159.9,
+      "thumbnail": "https://via.placeholder.com/150/808080/FFFFFF?text=Gray",
+      "likeCount": 20
+    }
+  ],
+  "productDetails": [
+    {
+      "id": 1,
+      "name": "T-Shirt Basic",
+      "description": "Basic cotton t-shirt",
+      "variants": [
+        {
+          "variantId": "v1",
+          "size": "S",
+          "color": "Red",
+          "price": 99.9,
+          "stock": 10,
+          "images": [
+            "https://via.placeholder.com/150/FF0000/FFFFFF?text=S+Red+1",
+            "https://via.placeholder.com/150/FF0000/FFFFFF?text=S+Red+2"
+          ]
+        },
+        {
+          "variantId": "v2",
+          "size": "M",
+          "color": "Blue",
+          "price": 109.9,
+          "stock": 5,
+          "images": [
+            "https://via.placeholder.com/150/0000FF/FFFFFF?text=M+Blue+1",
+            "https://via.placeholder.com/150/0000FF/FFFFFF?text=M+Blue+2"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Hoodie Classic",
+      "description": "Warm and comfy hoodie",
+      "variants": [
+        {
+          "variantId": "v3",
+          "size": "M",
+          "color": "Black",
+          "price": 149.9,
+          "stock": 8,
+          "images": [
+            "https://via.placeholder.com/150/000000/FFFFFF?text=M+Black+1"
+          ]
+        },
+        {
+          "variantId": "v4",
+          "size": "L",
+          "color": "Gray",
+          "price": 159.9,
+          "stock": 3,
+          "images": [
+            "https://via.placeholder.com/150/808080/FFFFFF?text=L+Gray+1",
+            "https://via.placeholder.com/150/808080/FFFFFF?text=L+Gray+2"
+          ]
+        }
+      ]
+    }
+  ],
+  "cart": []
+}
