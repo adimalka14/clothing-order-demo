@@ -10,6 +10,8 @@ export default function Button({
     endIcon,
     variant = 'contained',
     children,
+    loading,
+    size = 'medium',
     ...props
 }) {
     return (
@@ -19,6 +21,8 @@ export default function Button({
             startIcon={startIcon}
             endIcon={endIcon}
             variant={variant}
+            loading={loading}
+            size={size}
             {...props}
         >
             {children}
@@ -32,4 +36,6 @@ Button.propTypes = {
     startIcon: PropTypes.node,
     endIcon: PropTypes.node,
     variant: PropTypes.oneOf(['text', 'outlined', 'contained']),
+    loading: PropTypes.bool,
+    size: PropTypes.oneOf(['small', 'medium', 'large']),
 };

@@ -5,7 +5,7 @@ export default function AppBar({
     title,
     titlePosition = 'left',
     titleGrow = true,
-    position = 'fixed',
+    position = 'sticky',
     leftContent,
     rightContent,
 }) {
@@ -48,7 +48,7 @@ AppBar.propTypes = {
     title: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
     titlePosition: PropTypes.oneOf(['left', 'center', 'right']),
     titleGrow: PropTypes.bool,
-    position: PropTypes.oneOf(['static', 'fixed', 'absolute']),
+    position: PropTypes.oneOf(['static', 'fixed', 'absolute', 'sticky']),
     leftContent: PropTypes.node,
     rightContent: PropTypes.node,
 };

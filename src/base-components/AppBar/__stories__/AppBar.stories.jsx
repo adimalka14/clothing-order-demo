@@ -11,12 +11,16 @@ export default {
     parameters: {
         docs: {
             description: {
-                component: 'Reusable AppBar component wrapping MUI AppBar. Supports flexible left and right content, customizable title position, and growth.',
+                component:
+                    'Reusable AppBar component wrapping MUI AppBar. Supports flexible left and right content, customizable title position, and growth.',
             },
         },
     },
     argTypes: {
-        title: { control: 'text', description: 'The title text or node to display in the AppBar' },
+        title: {
+            control: 'text',
+            description: 'The title text or node to display in the AppBar',
+        },
         position: {
             control: 'select',
             options: ['fixed', 'static', 'absolute'],
@@ -24,7 +28,8 @@ export default {
         },
         titleGrow: {
             control: 'boolean',
-            description: 'If true, the title will take up remaining space (flexGrow = 1)',
+            description:
+                'If true, the title will take up remaining space (flexGrow = 1)',
         },
         titlePosition: {
             control: 'select',
@@ -34,12 +39,9 @@ export default {
     },
 };
 
-export const Default = (args) => (
-    <AppBar {...args} />
-);
+export const Default = (args) => <AppBar {...args} />;
 Default.args = {
     title: 'My App',
-    position: 'fixed',
     titleGrow: false,
     titlePosition: 'left',
 };
@@ -63,7 +65,6 @@ export const WithLeftIcon = (args) => (
 );
 WithLeftIcon.args = {
     title: 'App with Left Icon',
-    position: 'fixed',
     titleGrow: false,
     titlePosition: 'left',
 };
@@ -76,16 +77,10 @@ WithLeftIcon.parameters = {
 };
 
 export const WithRightButton = (args) => (
-    <AppBar
-        {...args}
-        rightContent={
-            <Button color="inherit">Login</Button>
-        }
-    />
+    <AppBar {...args} rightContent={<Button color="inherit">Login</Button>} />
 );
 WithRightButton.args = {
     title: 'App with Right Button',
-    position: 'fixed',
     titleGrow: false,
     titlePosition: 'left',
 };
@@ -131,7 +126,6 @@ export const WithRightMenu = (args) => {
 };
 WithRightMenu.args = {
     title: 'App with Right Menu',
-    position: 'fixed',
     titleGrow: false,
     titlePosition: 'left',
 };
@@ -163,7 +157,6 @@ export const LeftAndRightContent = (args) => (
 );
 LeftAndRightContent.args = {
     title: 'Full AppBar',
-    position: 'fixed',
     titleGrow: false,
     titlePosition: 'left',
 };

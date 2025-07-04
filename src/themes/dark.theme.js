@@ -5,5 +5,8 @@ export const getDarkTheme = (direction) =>
         direction,
         palette: {
             mode: 'dark',
+            background: {
+                paper: 'rgba(251,224,157,0.63)',
+            },
         },
     });

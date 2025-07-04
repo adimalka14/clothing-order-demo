@@ -9,24 +9,29 @@ import {
 } from '@mui/material';
 
 export default function Select({
-                                   id,
-                                   label,
-                                   placeholder,
-                                   variant = 'outlined',
-                                   selected,
-                                   fullWidth = true,
-                                   error,
-                                   helperText,
-                                   disabled,
-                                   required,
-                                   size = 'medium',
-                                   options = [],
-                                   onChange,
-                                   startCmp,
-                                   endCmp,
-                               }) {
+    id,
+    label,
+    placeholder,
+    variant = 'outlined',
+    selected,
+    fullWidth = true,
+    error,
+    helperText,
+    disabled,
+    required,
+    size = 'medium',
+    options = [],
+    onChange,
+    startCmp,
+    endCmp,
+}) {
     return (
-        <FormControl fullWidth={fullWidth} variant={variant} size={size} error={error}>
+        <FormControl
+            fullWidth={fullWidth}
+            variant={variant}
+            size={size}
+            error={error}
+        >
             {label && <InputLabel id={`${id}-label`}>{label}</InputLabel>}
             <MuiSelect
                 labelId={`${id}-label`}
@@ -66,7 +71,8 @@ Select.propTypes = {
     size: PropTypes.oneOf(['small', 'medium']),
     options: PropTypes.arrayOf(
         PropTypes.shape({
-            value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
+            value: PropTypes.oneOfType([PropTypes.string, PropTypes.number])
+                .isRequired,
             label: PropTypes.string.isRequired,
         })
     ),
