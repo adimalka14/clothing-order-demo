@@ -7,6 +7,8 @@ export default function Stack({
     styles = {},
     className = '',
     direction = 'column',
+    alignItems = 'center',
+    justifyContent = 'center',
     spacing = 0,
 }) {
     return (
@@ -15,6 +17,8 @@ export default function Stack({
             className={className}
             direction={direction}
             spacing={spacing}
+            alignItems={alignItems}
+            justifyContent={justifyContent}
         >
             {children}
         </MuiStack>
@@ -32,4 +36,19 @@ Stack.propTypes = {
         'column-reverse',
     ]),
     spacing: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+    alignItems: PropTypes.oneOf([
+        'flex-start',
+        'center',
+        'flex-end',
+        'stretch',
+        'baseline',
+    ]),
+    justifyContent: PropTypes.oneOf([
+        'flex-start',
+        'center',
+        'flex-end',
+        'space-between',
+        'space-around',
+        'space-evenly',
+    ]),
 };

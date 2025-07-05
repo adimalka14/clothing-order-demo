@@ -256,24 +256,24 @@
   ],
   "cart": [
     {
-      "id": "c55a",
-      "productId": "2",
-      "variantId": "000009",
-      "name": "Hoodie Classic",
-      "description": "Warm and comfy hoodie made from premium cotton blend.",
+      "id": "7eaf",
+      "productId": "1",
+      "variantId": "000006",
+      "name": "T-Shirt Basic",
+      "description": "A high-quality basic cotton t-shirt for everyday comfort.",
       "image": {
-        "src": "/src/assets/hoodie/grey-1.png",
-        "alt": "Hoodie Classic Grey front"
+        "src": "/src/assets/t-shirt/black-1.png",
+        "alt": "T-Shirt Basic Black front"
       },
-      "price": 159.9,
-      "quantity": 1,
+      "price": 109.9,
+      "quantity": 5,
       "values": {
-        "color": "Grey",
-        "size": "M"
+        "color": "Black",
+        "size": "L"
       }
     },
     {
-      "id": "cd60",
+      "id": "0538",
       "productId": "2",
       "variantId": "000010",
       "name": "Hoodie Classic",
@@ -283,112 +283,10 @@
         "alt": "Hoodie Classic Grey front"
       },
       "price": 159.9,
-      "quantity": 1,
+      "quantity": 2,
       "values": {
         "color": "Grey",
         "size": "L"
-      }
-    },
-    {
-      "id": "099a",
-      "productId": "2",
-      "variantId": "000008",
-      "name": "Hoodie Classic",
-      "description": "Warm and comfy hoodie made from premium cotton blend.",
-      "image": {
-        "src": "/src/assets/hoodie/black-1.png",
-        "alt": "Hoodie Classic Black front"
-      },
-      "price": 149.9,
-      "quantity": 1,
-      "values": {
-        "color": "Black",
-        "size": "L"
-      }
-    },
-    {
-      "id": "a5a6",
-      "productId": "2",
-      "variantId": "000007",
-      "name": "Hoodie Classic",
-      "description": "Warm and comfy hoodie made from premium cotton blend.",
-      "image": {
-        "src": "/src/assets/hoodie/black-1.png",
-        "alt": "Hoodie Classic Black front"
-      },
-      "price": 149.9,
-      "quantity": 1,
-      "values": {
-        "color": "Black",
-        "size": "M"
-      }
-    },
-    {
-      "id": "de17",
-      "productId": "1",
-      "variantId": "000002",
-      "name": "T-Shirt Basic",
-      "description": "A high-quality basic cotton t-shirt for everyday comfort.",
-      "image": {
-        "src": "/src/assets/t-shirt/white-1.png",
-        "alt": "T-Shirt Basic White front"
-      },
-      "price": 99.9,
-      "quantity": 1,
-      "values": {
-        "color": "White",
-        "size": "M"
-      }
-    },
-    {
-      "id": "ad83",
-      "productId": "1",
-      "variantId": "000003",
-      "name": "T-Shirt Basic",
-      "description": "A high-quality basic cotton t-shirt for everyday comfort.",
-      "image": {
-        "src": "/src/assets/t-shirt/white-1.png",
-        "alt": "T-Shirt Basic White front"
-      },
-      "price": 99.9,
-      "quantity": 1,
-      "values": {
-        "color": "White",
-        "size": "L"
-      }
-    },
-    {
-      "id": "d040",
-      "productId": "1",
-      "variantId": "000001",
-      "name": "T-Shirt Basic",
-      "description": "A high-quality basic cotton t-shirt for everyday comfort.",
-      "image": {
-        "src": "/src/assets/t-shirt/white-1.png",
-        "alt": "T-Shirt Basic White front"
-      },
-      "price": 99.9,
-      "quantity": 1,
-      "values": {
-        "color": "White",
-        "size": "S"
-      }
-    },
-    {
-      "id": "b4c7",
-      "productId": "1",
-      "variantId": "000004",
-      "name": "T-Shirt Basic",
-      "description": "A high-quality basic cotton t-shirt for everyday comfort.",
-      "image": {
-        "src": "/src/assets/t-shirt/black-1.png",
-        "alt": "T-Shirt Basic Black front"
-      },
-      "price": 109.9,
-      "quantity": 1,
-      "values": {
-        "color": "Black",
-        "size": "S"
       }
     }
   ]

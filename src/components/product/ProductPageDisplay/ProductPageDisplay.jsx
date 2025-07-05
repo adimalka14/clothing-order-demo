@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
+import { styled } from '@mui/material/styles';
 
 import SlidingImages from '/src/components/product/SlidingImages/SlidingImages';
 import {
@@ -28,10 +29,11 @@ export default function ProductPageDisplay({
         <Box
             styles={{
                 mx: 'auto',
-                padding: '5em',
+                p: { xs: 2, md: '5em' },
                 display: 'flex',
-                flexDirection: 'row',
-                gap: 5,
+                flexDirection: { xs: 'column', md: 'row' },
+                gap: { xs: 2, md: 5 },
+                alignItems: 'center',
             }}
         >
             <SlidingImages images={images} height="400px" width="400px" />

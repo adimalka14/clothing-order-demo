@@ -24,7 +24,7 @@ export default function ProductPage() {
             <Box
                 display="flex"
                 styles={{ justifyContent: 'center' }}
-                padding={5}
+                padding={0}
             >
                 <CircularProgress />
             </Box>
@@ -143,6 +143,7 @@ export default function ProductPage() {
                                 ))}
 
                                 <Select
+                                    variant={'standard'}
                                     id="quantity"
                                     name="quantity"
                                     label="Quantity"

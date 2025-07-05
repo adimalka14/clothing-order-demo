@@ -7,13 +7,14 @@ export default function Box({
     styles = {},
     className = '',
     padding,
-    margin,
+    margin = 0,
     display,
 }) {
     return (
         <MuiBox
             sx={{
                 ...styles,
+                //boxSizing: 'border-box',
                 ...(padding !== undefined && { p: padding }),
                 ...(margin !== undefined && { m: margin }),
                 ...(display !== undefined && { display }),

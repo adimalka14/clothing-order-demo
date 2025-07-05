@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import { AppBar as MuiAppBar, Toolbar, Typography, Box } from '@mui/material';
 
 export default function AppBar({
+    color = 'default',
     title,
     titlePosition = 'left',
     titleGrow = true,
@@ -10,7 +11,7 @@ export default function AppBar({
     rightContent,
 }) {
     return (
-        <MuiAppBar position={position}>
+        <MuiAppBar position={position} color={color}>
             <Toolbar
                 variant="dense"
                 sx={
@@ -45,6 +46,7 @@ export default function AppBar({
 }
 
 AppBar.propTypes = {
+    color: PropTypes.oneOf(['default', 'inherit', 'primary', 'secondary']),
     title: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
     titlePosition: PropTypes.oneOf(['left', 'center', 'right']),
     titleGrow: PropTypes.bool,

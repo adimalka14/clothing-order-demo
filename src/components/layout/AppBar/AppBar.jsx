@@ -1,6 +1,11 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+
+import {
+    LightMode,
+    DarkMode,
+    ShoppingCart as ShoppingCartIcon,
+} from '@mui/icons-material';
 
 import { useCart } from '../../../services/useCart.js';
 import {
@@ -9,10 +14,16 @@ import {
     Button,
     Tooltip,
 } from '/src/base-components';
+import { useThemeContext } from '/src/themes/Provider.jsx';
 
 export default function AppBar() {
     const { count } = useCart();
     const navigate = useNavigate();
+    const { theme, handleSetTheme } = useThemeContext();
+
+    const toggleTheme = () => {
+        handleSetTheme(theme === 'light' ? 'dark' : 'light');
+    };
 
     const handleTitleClick = () => {
         navigate('/');
@@ -23,9 +34,10 @@ export default function AppBar() {
 
     return (
         <BaseAppBar
+            color={'primary'}
             title={
                 <Tooltip title={'Pass to the home page'}>
-                    <Button onClick={handleTitleClick}>
+                    <Button onClick={handleTitleClick} variant={'text'}>
                         Clothing Order
                     </Button>{' '}
                 </Tooltip>
@@ -43,6 +55,11 @@ export default function AppBar() {
                         <ShoppingCartIcon />
                     </IconButton>
                 </Tooltip>
+            }
+            leftContent={
+                <IconButton color={'inherit'} onClick={toggleTheme}>
+                    {theme === 'dark' ? <DarkMode /> : <LightMode />}
+                </IconButton>
             }
         />
     );

@@ -1,16 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { CircularProgress } from '@mui/material';
 import { Delete } from '@mui/icons-material';
 
 import {
     Button,
-    TextField,
     Typography,
     Box,
     Stack,
     Image,
-    IconButton,
+    Select,
 } from '/src/base-components';
 
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
@@ -36,56 +34,76 @@ export default function CartItem({ item, onUpdateQuantity, onRemoveItem }) {
     };
 
     return (
-        <Box
-            styles={{ border: '1px solid #ccc', padding: '1rem', width: '50%' }}
+        <Stack
+            direction="row"
+            spacing={2}
+            alignItems="center"
+            justifyContent={'space-between'}
+            styles={{
+                border: '1px solid #ccc',
+                padding: '1rem',
+                width: { xs: '100%', sm: '80%', md: '60%' },
+                boxSizing: 'border-box',
+            }}
         >
-            <Stack direction="row" spacing={2} alignItems="center">
-                <Box
-                    styles={{
-                        width: '100px',
-                        height: '100px',
-                        background: '#eee',
-                    }}
-                >
-                    <Image src={item.image.src} alt={item.image.alt} />
-                </Box>
-                <Box styles={{ flexGrow: 1 }}>
-                    <Typography type="title">{item.name}</Typography>
-                    <Typography type="title">Price: ${item.price}</Typography>
-                </Box>
-                <Stack spacing={2}>
-                    {Object.keys(item.values).map(
-                        (key) =>
-                            key !== 'quantity' && (
-                                <Typography type="body" key={key}>
-                                    {key}: {item.values[key]}
-                                </Typography>
-                            )
-                    )}
-                    <TextField
-                        id={`quantity-${item.id}`}
-                        type="number"
-                        label="Quantity"
-                        value={String(item.quantity)}
-                        onChange={handleChange}
-                        size="small"
-                        fullWidth={false}
-                        disabled={isLoadingUpdate}
-                    />
-                </Stack>
-                <Box display={'flex'} styles={{ justifyContent: 'center' }}>
-                    <Button
-                        color="error"
-                        loading={isLoadingRemove}
-                        onClick={handleRemove}
-                        variant={'outlined'}
-                        size={'small'}
-                    >
-                        <Delete />
-                    </Button>
-                </Box>
+            <Box
+                styles={{
+                    width: { xs: '100px', sm: '150px', md: '200px' },
+                    height: { xs: '100px', sm: '150px', md: '200px' },
+                    background: '#eee',
+                }}
+            >
+                <Image src={item.image.src} alt={item.image.alt} />
+            </Box>
+            <Stack spacing={2} alignItems={'flex-start'}>
+                <Typography type="title" fontWeight={'bold'}>
+                    ${item.price}
+                </Typography>
+                <Typography type="subtitle">{item.name}</Typography>
+                {Object.keys(item.values).map(
+                    (key) =>
+                        key !== 'quantity' && (
+                            <Typography type="body" key={key}>
+                                {key}: {item.values[key]}
+                            </Typography>
+                        )
+                )}
             </Stack>
-        </Box>
+            <Stack
+                display={'flex'}
+                justifyContent={'space-between'}
+                alignItems={'flex-start'}
+                direction={'column'}
+                spacing={4}
+            >
+                <Select
+                    disabled={isLoadingUpdate}
+                    variant={'standard'}
+                    id={`quantity-${item.id}`}
+                    name="quantity"
+                    label="Quantity"
+                    selected={String(item.quantity)}
+                    onChange={handleChange}
+                    options={[
+                        { value: 1, label: '1' },
+                        { value: 2, label: '2' },
+                        { value: 3, label: '3' },
+                        { value: 4, label: '4' },
+                        { value: 5, label: '5' },
+                    ]}
+                />
+                <Button
+                    color="error"
+                    loading={isLoadingRemove}
+                    onClick={handleRemove}
+                    variant={'outlined'}
+                    size={'small'}
+                    styles={{ width: '10%' }}
+                >
+                    <Delete />
+                </Button>
+            </Stack>
+        </Stack>
     );
 }
 

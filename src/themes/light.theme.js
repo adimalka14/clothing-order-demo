@@ -6,7 +6,16 @@ export const getLightTheme = (direction) =>
         palette: {
             mode: 'light',
             primary: {
-                main: '#222222',
+                main: '#373737',
+            },
+        },
+        components: {
+            MuiButton: {
+                styleOverrides: {
+                    text: {
+                        color: '#ffffff',
+                    },
+                },
             },
         },
     });
