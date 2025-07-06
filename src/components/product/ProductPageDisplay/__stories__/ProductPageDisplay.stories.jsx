@@ -8,8 +8,8 @@ export default {
 };
 
 const images = [
-    { src: '/src/assets/t-shirt/white-1.png', alt: 'White T-shirt 1' },
-    { src: '/src/assets/t-shirt/white-2.png', alt: 'White T-shirt 2' },
+    { src: 'assets/t-shirt/white-1.png', alt: 'White T-shirt 1' },
+    { src: 'assets/t-shirt/white-2.png', alt: 'White T-shirt 2' },
 ];
 
 export const Default = () => (

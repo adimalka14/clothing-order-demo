@@ -22,8 +22,8 @@ export const WithImages = () => {
             width={200}
             height={300}
             images={[
-                { src: '/src/assets/t-shirt/white-1.png', alt: 'Image 1' },
-                { src: '/src/assets/t-shirt/white-2.png', alt: 'Image 2' },
+                { src: 'assets/t-shirt/white-1.png', alt: 'Image 1' },
+                { src: 'assets/t-shirt/white-2.png', alt: 'Image 2' },
             ]}
         />
     );

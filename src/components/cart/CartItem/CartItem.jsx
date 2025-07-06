@@ -53,7 +53,7 @@ export default function CartItem({ item, onUpdateQuantity, onRemoveItem }) {
                     background: '#eee',
                 }}
             >
-                <Image src={item.image.src} alt={item.image.alt} />
+                <Image src={item?.image?.src} alt={item?.image?.alt} />
             </Box>
             <Stack spacing={2} alignItems={'flex-start'}>
                 <Typography type="title" fontWeight={'bold'}>

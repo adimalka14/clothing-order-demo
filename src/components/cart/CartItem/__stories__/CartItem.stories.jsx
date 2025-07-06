@@ -12,7 +12,7 @@ const sampleItem = {
     name: 'Sample T-shirt',
     price: 19.99,
     quantity: 2,
-    image: { src: '/src/assets/t-shirt/white-1.png', alt: 'Sample T-shirt' },
+    image: { src: 'assets/t-shirt/white-1.png', alt: 'Sample T-shirt' },
     values: { color: 'white', size: 'M' },
 };
 

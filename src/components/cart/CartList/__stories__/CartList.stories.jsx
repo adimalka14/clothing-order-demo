@@ -13,7 +13,7 @@ const items = [
         name: 'T-shirt White',
         price: 19.99,
         quantity: 1,
-        image: { src: '/src/assets/t-shirt/white-1.png', alt: 'T-shirt White' },
+        image: { src: 'assets/t-shirt/white-1.png', alt: 'T-shirt White' },
         values: { color: 'white', size: 'M' },
     },
     {
@@ -21,7 +21,7 @@ const items = [
         name: 'T-shirt Black',
         price: 24.99,
         quantity: 2,
-        image: { src: '/src/assets/t-shirt/black-1.png', alt: 'T-shirt Black' },
+        image: { src: 'assets/t-shirt/black-1.png', alt: 'T-shirt Black' },
         values: { color: 'black', size: 'L' },
     },
 ];

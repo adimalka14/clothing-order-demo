@@ -7,8 +7,8 @@ export default {
     component: ProductCard,
     args: {
         images: [
-            { src: '/src/assets/t-shirt/white-1.png', alt: 'Image 1' },
-            { src: '/src/assets/t-shirt/white-2.png', alt: 'Image 2' },
+            { src: 'assets/t-shirt/white-1.png', alt: 'Image 1' },
+            { src: 'assets/t-shirt/white-2.png', alt: 'Image 2' },
         ],
         onClick: action('ProductCard clicked'),
     },

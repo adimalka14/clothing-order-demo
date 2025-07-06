@@ -9,15 +9,14 @@
       "price": 99.9,
       "images": [
         {
-          "src": "/src/assets/t-shirt/white-1.png",
+          "src": "assets/t-shirt/white-1.png",
           "alt": "T-Shirt Basic White"
         },
         {
-          "src": "/src/assets/t-shirt/white-2.png",
+          "src": "assets/t-shirt/white-2.png",
           "alt": "T-Shirt Basic White"
         }
       ],
-      "likeCount": 10,
       "id": "8712"
     },
     {
@@ -29,15 +28,14 @@
       "price": 109.9,
       "images": [
         {
-          "src": "/src/assets/t-shirt/black-1.png",
+          "src": "assets/t-shirt/black-1.png",
           "alt": "T-Shirt Basic Black"
         },
         {
-          "src": "/src/assets/t-shirt/black-2.png",
+          "src": "assets/t-shirt/black-2.png",
           "alt": "T-Shirt Basic Black"
         }
       ],
-      "likeCount": 5,
       "id": "3d1e"
     },
     {
@@ -49,15 +47,14 @@
       "price": 149.9,
       "images": [
         {
-          "src": "/src/assets/hoodie/black-1.png",
+          "src": "assets/hoodie/black-1.png",
           "alt": "Hoodie Classic Black"
         },
         {
-          "src": "/src/assets/hoodie/black-2.png",
+          "src": "assets/hoodie/black-2.png",
           "alt": "Hoodie Classic Black"
         }
       ],
-      "likeCount": 15,
       "id": "f829"
     },
     {
@@ -69,15 +66,14 @@
       "price": 159.9,
       "images": [
         {
-          "src": "/src/assets/hoodie/grey-1.png",
+          "src": "assets/hoodie/grey-1.png",
           "alt": "Hoodie Classic Grey"
         },
         {
-          "src": "/src/assets/hoodie/grey-2.png",
+          "src": "assets/hoodie/grey-2.png",
           "alt": "Hoodie Classic Grey"
         }
       ],
-      "likeCount": 20,
       "id": "4065"
     }
   ],
@@ -103,7 +99,6 @@
           "size": "S",
           "color": "White",
           "price": 99.9,
-          "stock": 10,
           "imageSetId": "imgSetWhite"
         },
         {
@@ -111,7 +106,6 @@
           "size": "M",
           "color": "White",
           "price": 99.9,
-          "stock": 0,
           "imageSetId": "imgSetWhite"
         },
         {
@@ -119,7 +113,6 @@
           "size": "L",
           "color": "White",
           "price": 99.9,
-          "stock": 5,
           "imageSetId": "imgSetWhite"
         },
         {
@@ -127,7 +120,6 @@
           "size": "S",
           "color": "Black",
           "price": 109.9,
-          "stock": 4,
           "imageSetId": "imgSetBlack"
         },
         {
@@ -135,7 +127,6 @@
           "size": "M",
           "color": "Black",
           "price": 109.9,
-          "stock": 2,
           "imageSetId": "imgSetBlack"
         },
         {
@@ -143,7 +134,6 @@
           "size": "L",
           "color": "Black",
           "price": 109.9,
-          "stock": 0,
           "imageSetId": "imgSetBlack"
         }
       ],
@@ -152,11 +142,11 @@
           "imageSetId": "imgSetWhite",
           "images": [
             {
-              "src": "/src/assets/t-shirt/white-1.png",
+              "src": "assets/t-shirt/white-1.png",
               "alt": "T-Shirt Basic White front"
             },
             {
-              "src": "/src/assets/t-shirt/white-2.png",
+              "src": "assets/t-shirt/white-2.png",
               "alt": "T-Shirt Basic White back"
             }
           ]
@@ -165,11 +155,11 @@
           "imageSetId": "imgSetBlack",
           "images": [
             {
-              "src": "/src/assets/t-shirt/black-1.png",
+              "src": "assets/t-shirt/black-1.png",
               "alt": "T-Shirt Basic Black front"
             },
             {
-              "src": "/src/assets/t-shirt/black-2.png",
+              "src": "assets/t-shirt/black-2.png",
               "alt": "T-Shirt Basic Black back"
             }
           ]
@@ -196,7 +186,6 @@
           "size": "M",
           "color": "Black",
           "price": 149.9,
-          "stock": 8,
           "imageSetId": "imgSetHoodieBlack"
         },
         {
@@ -204,7 +193,6 @@
           "size": "L",
           "color": "Black",
           "price": 149.9,
-          "stock": 0,
           "imageSetId": "imgSetHoodieBlack"
         },
         {
@@ -212,7 +200,6 @@
           "size": "M",
           "color": "Grey",
           "price": 159.9,
-          "stock": 3,
           "imageSetId": "imgSetHoodieGrey"
         },
         {
@@ -220,7 +207,6 @@
           "size": "L",
           "color": "Grey",
           "price": 159.9,
-          "stock": 1,
           "imageSetId": "imgSetHoodieGrey"
         }
       ],
@@ -229,11 +215,11 @@
           "imageSetId": "imgSetHoodieBlack",
           "images": [
             {
-              "src": "/src/assets/hoodie/black-1.png",
+              "src": "assets/hoodie/black-1.png",
               "alt": "Hoodie Classic Black front"
             },
             {
-              "src": "/src/assets/hoodie/black-2.png",
+              "src": "assets/hoodie/black-2.png",
               "alt": "Hoodie Classic Black back"
             }
           ]
@@ -242,11 +228,11 @@
           "imageSetId": "imgSetHoodieGrey",
           "images": [
             {
-              "src": "/src/assets/hoodie/grey-1.png",
+              "src": "assets/hoodie/grey-1.png",
               "alt": "Hoodie Classic Grey front"
             },
             {
-              "src": "/src/assets/hoodie/grey-2.png",
+              "src": "assets/hoodie/grey-2.png",
               "alt": "Hoodie Classic Grey back"
             }
           ]
@@ -256,54 +242,37 @@
   ],
   "cart": [
     {
-      "id": "fd7c",
-      "productId": "1",
-      "variantId": "000001",
-      "name": "T-Shirt Basic",
-      "description": "A high-quality basic cotton t-shirt for everyday comfort.",
-      "image": {
-        "src": "/src/assets/t-shirt/white-1.png",
-        "alt": "T-Shirt Basic White front"
-      },
-      "price": 99.9,
-      "quantity": 1,
-      "values": {
-        "color": "White",
-        "size": "S"
-      }
-    },
-    {
-      "id": "6d53",
+      "id": "da35",
       "productId": "1",
       "variantId": "000004",
       "name": "T-Shirt Basic",
       "description": "A high-quality basic cotton t-shirt for everyday comfort.",
       "image": {
-        "src": "/src/assets/t-shirt/black-1.png",
+        "src": "assets/t-shirt/black-1.png",
         "alt": "T-Shirt Basic Black front"
       },
       "price": 109.9,
-      "quantity": 1,
+      "quantity": 2,
       "values": {
         "color": "Black",
         "size": "S"
       }
     },
     {
-      "id": "22c1",
+      "id": "5c6d",
       "productId": "2",
-      "variantId": "000009",
+      "variantId": "000010",
       "name": "Hoodie Classic",
       "description": "Warm and comfy hoodie made from premium cotton blend.",
       "image": {
-        "src": "/src/assets/hoodie/grey-1.png",
+        "src": "assets/hoodie/grey-1.png",
         "alt": "Hoodie Classic Grey front"
       },
       "price": 159.9,
-      "quantity": 1,
+      "quantity": 2,
       "values": {
         "color": "Grey",
-        "size": "M"
+        "size": "L"
       }
     }
   ]
