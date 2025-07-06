@@ -5,7 +5,7 @@ It showcases advanced UI components, theming (light/dark), RTL/LTR direction sup
 
 🌐 **Live Demos**
 
-* [Netlify - App Demo](https://clothing-store-demo.netlify.app/) <!-- Update with your link -->
+* [Netlify - App Demo](https://clothing-order-demo.netlify.app/) <!-- Update with your link -->
 * [GitHub Pages - Storybook](https://adimalka14.github.io/clothing-store-demo) <!-- Update with your link -->
 
 🌐 Live API
