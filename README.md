@@ -8,6 +8,17 @@ It showcases advanced UI components, theming (light/dark), RTL/LTR direction sup
 * [Netlify - App Demo](https://clothing-store-demo.netlify.app/) <!-- Update with your link -->
 * [GitHub Pages - Storybook](https://adimalka14.github.io/clothing-store-demo) <!-- Update with your link -->
 
+🌐 Live API
+* The mock API (json-server) is deployed and publicly accessible:
+👉 https://clothing-order-demo.onrender.com
+
+* You can test endpoints like:
+
+  * https://clothing-order-demo.onrender.com/products
+
+  * https://clothing-order-demo.onrender.com/cart
+
+
 ---
 
 ## 🚀 **Features**
