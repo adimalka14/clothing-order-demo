@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { Formik, Form } from 'formik';
+import * as Yup from 'yup';
 import { CircularProgress } from '@mui/material';
 
 import { useProductDetails } from '/src/services/useProducts';
@@ -18,6 +19,7 @@ export default function ProductPage() {
     const { product, loading, error } = useProductDetails(id);
     const [isLiked, setIsLiked] = useState(false);
     const { addOrUpdate } = useAddToCart();
+    let images;
 
     if (loading) {
         return (
@@ -63,6 +65,16 @@ export default function ProductPage() {
 
     const productOptionsKeys = Object.keys(product.options);
 
+    const validationSchema = Yup.object().shape({
+        ...productOptionsKeys.reduce((acc, key) => {
+            acc[key] = Yup.mixed()
+                .oneOf(product.options[key])
+                .required('Required');
+            return acc;
+        }, {}),
+        quantity: Yup.number().min(1).max(5).required('Required'),
+    });
+
     const initialValues = productOptionsKeys.reduce((acc, key) => {
         acc[key] = variant[key];
         return acc;
@@ -74,27 +86,50 @@ export default function ProductPage() {
         );
     };
 
-    let images;
+    const onSubmit = async ({ quantity, ...values }, { setStatus }) => {
+        setStatus(null);
+        try {
+            const selectedVariant = findVariant(values);
+
+            await addOrUpdate({
+                productId: id,
+                variantId: selectedVariant.variantId,
+                name: product.name,
+                description: product.description,
+                image: images[0],
+                price: selectedVariant.price,
+                quantity,
+                values,
+            });
+
+            await new Promise((resolve) => setTimeout(resolve, 1000));
+
+            setStatus({
+                type: 'success',
+                msg: 'Added to cart successfully!',
+            });
+
+            setTimeout(() => {
+                setStatus(null);
+            }, 5000);
+        } catch (error) {
+            setStatus({ type: 'error', msg: 'Failed to add to cart.', error });
+        }
+    };
 
     return (
         <Formik
             initialValues={{ ...initialValues, quantity: 1 }}
-            onSubmit={async ({ quantity, ...values }) => {
-                const selectedVariant = findVariant(values);
-
-                await addOrUpdate({
-                    productId: id,
-                    variantId: selectedVariant.variantId,
-                    name: product.name,
-                    description: product.description,
-                    image: images[0],
-                    price: selectedVariant.price,
-                    quantity,
-                    values,
-                });
-            }}
+            validationSchema={validationSchema}
+            onSubmit={onSubmit}
         >
-            {({ values, setFieldValue, handleSubmit }) => {
+            {({
+                values,
+                setFieldValue,
+                handleSubmit,
+                isSubmitting,
+                status,
+            }) => {
                 const selectedVariant =
                     product.variants.find((v) =>
                         productOptionsKeys.every((k) => v[k] === values[k])
@@ -115,6 +150,8 @@ export default function ProductPage() {
                         onAddToCart={handleSubmit}
                         onToggleLike={() => setIsLiked(!isLiked)}
                         stock={selectedVariant.stock}
+                        addLoading={isSubmitting}
+                        status={status}
                     >
                         <Form>
                             <Box

@@ -8,6 +8,7 @@ export default function Typography({
     className = '',
     type = 'body',
     align = 'inherit',
+    color = 'inherit',
     fontWeight,
     gutterBottom = false,
 }) {
@@ -23,6 +24,7 @@ export default function Typography({
             variant={variantMap[type]}
             align={align}
             gutterBottom={gutterBottom}
+            color={color}
             sx={{
                 ...styles,
                 ...(fontWeight !== undefined && { fontWeight }),
@@ -41,5 +43,6 @@ Typography.propTypes = {
     type: PropTypes.oneOf(['title', 'subtitle', 'body', 'caption']),
     align: PropTypes.oneOf(['inherit', 'left', 'center', 'right', 'justify']),
     fontWeight: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+    color: PropTypes.string,
     gutterBottom: PropTypes.bool,
 };

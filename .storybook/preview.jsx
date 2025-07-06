@@ -1,5 +1,8 @@
 import React from 'react';
+import { Provider } from 'react-redux';
+
 import { ThemeProvider } from '../src/themes/Provider';
+import { store } from '/src/store/store';
 
 /** @type { import('@storybook/react-vite').Preview } */
 const preview = {
@@ -23,9 +26,11 @@ const preview = {
             const { dir, theme } = context.globals;
 
             return (
-                <ThemeProvider initialDir={dir} initialTheme={theme}>
-                    <Story />
-                </ThemeProvider>
+                <Provider store={store}>
+                    <ThemeProvider initialDir={dir} initialTheme={theme}>
+                        <Story />
+                    </ThemeProvider>
+                </Provider>
             );
         },
     ],

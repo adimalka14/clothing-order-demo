@@ -14,7 +14,6 @@ export default function Box({
         <MuiBox
             sx={{
                 ...styles,
-                //boxSizing: 'border-box',
                 ...(padding !== undefined && { p: padding }),
                 ...(margin !== undefined && { m: margin }),
                 ...(display !== undefined && { display }),

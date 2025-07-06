@@ -1,8 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import FavoriteIcon from '@mui/icons-material/Favorite';
-import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
-import { styled } from '@mui/material/styles';
+import {
+    Favorite as FavoriteIcon,
+    FavoriteBorder as FavoriteBorderIcon,
+    ShoppingCart as ShoppingCartIcon,
+} from '@mui/icons-material';
+import Snackbar from '@mui/material/Snackbar';
+import Slide from '@mui/material/Slide';
 
 import SlidingImages from '/src/components/product/SlidingImages/SlidingImages';
 import {
@@ -23,6 +27,8 @@ export default function ProductPageDisplay({
     onToggleLike,
     isLiked,
     actions,
+    addLoading,
+    status,
     children,
 }) {
     return (
@@ -34,6 +40,7 @@ export default function ProductPageDisplay({
                 flexDirection: { xs: 'column', md: 'row' },
                 gap: { xs: 2, md: 5 },
                 alignItems: 'center',
+                justifyContent: 'center',
             }}
         >
             <SlidingImages images={images} height="400px" width="400px" />
@@ -79,14 +86,23 @@ export default function ProductPageDisplay({
                     marginTop={2}
                     styles={{ justifyContent: 'center' }}
                 >
-                    <Button variant="contained" onClick={onAddToCart}>
-                        Add to Cart
+                    <Button
+                        variant="contained"
+                        onClick={onAddToCart}
+                        loading={addLoading}
+                    >
+                        Add to Cart <ShoppingCartIcon />
                     </Button>
-
                     <IconButton onClick={onToggleLike}>
                         {isLiked ? <FavoriteIcon /> : <FavoriteBorderIcon />}
                     </IconButton>
                 </Stack>
+                <Snackbar
+                    anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
+                    open={!!status}
+                    message={status?.msg}
+                    TransitionComponent={Slide}
+                />
             </Box>
         </Box>
     );

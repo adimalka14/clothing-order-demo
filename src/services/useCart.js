@@ -34,10 +34,11 @@ export function useAddToCart() {
     const dispatch = useDispatch();
     const items = useSelector(selectCartItems);
 
-    const add = (item) => dispatch(addToCart(item));
-    const update = (id, changes) => dispatch(updateCart({ id, changes }));
+    const add = (item) => dispatch(addToCart(item)).unwrap();
+    const update = (id, changes) =>
+        dispatch(updateCart({ id, changes })).unwrap();
 
-    const addOrUpdate = (newItem) => {
+    const addOrUpdate = async (newItem) => {
         const existingItem = items?.find(
             (item) =>
                 item.productId === newItem.productId &&
@@ -45,11 +46,11 @@ export function useAddToCart() {
         );
 
         if (existingItem) {
-            update(existingItem.id, {
+            await update(existingItem.id, {
                 quantity: existingItem.quantity + newItem.quantity,
             });
         } else {
-            add(newItem);
+            await add(newItem);
         }
     };
 

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
@@ -20,11 +20,19 @@ export default function ProductCard({
     price,
     onClick,
     maxWidth = 250,
-    height,
     isLiked = false,
+    height,
     onClickLike,
     priceCurrency = '$',
 }) {
+    const [liked, setLiked] = useState(isLiked);
+
+    const handleLikeClick = (e) => {
+        e.stopPropagation();
+        setLiked(!liked);
+        onClickLike?.(e);
+    };
+
     return (
         <Card styles={{ maxWidth }}>
             <div onClick={onClick} style={{ cursor: 'pointer' }}>
@@ -40,17 +48,8 @@ export default function ProductCard({
                             right: 0,
                         }}
                     >
-                        <IconButton
-                            onClick={(e) => {
-                                e.stopPropagation();
-                                onClickLike?.(e);
-                            }}
-                        >
-                            {isLiked ? (
-                                <FavoriteIcon />
-                            ) : (
-                                <FavoriteBorderIcon />
-                            )}
+                        <IconButton onClick={handleLikeClick}>
+                            {liked ? <FavoriteIcon /> : <FavoriteBorderIcon />}
                         </IconButton>
                     </CardActions>
 

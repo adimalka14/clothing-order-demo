@@ -1,12 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 
+import { fetchProducts } from '../store/features/products/productsThunk';
 import {
-    fetchProducts,
-    fetchProductById,
-} from '../store/features/products/productsThunk';
-import {
-    selectProductById,
     selectProductsList,
     selectProductsLoading,
     selectProductsError,
