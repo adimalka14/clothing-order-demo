@@ -9,11 +9,11 @@
       "price": 99.9,
       "images": [
         {
-          "src": "assets/t-shirt/white-1.png",
+          "src": "/assets/t-shirt/white-1.png",
           "alt": "T-Shirt Basic White"
         },
         {
-          "src": "assets/t-shirt/white-2.png",
+          "src": "/assets/t-shirt/white-2.png",
           "alt": "T-Shirt Basic White"
         }
       ],
@@ -28,11 +28,11 @@
       "price": 109.9,
       "images": [
         {
-          "src": "assets/t-shirt/black-1.png",
+          "src": "/assets/t-shirt/black-1.png",
           "alt": "T-Shirt Basic Black"
         },
         {
-          "src": "assets/t-shirt/black-2.png",
+          "src": "/assets/t-shirt/black-2.png",
           "alt": "T-Shirt Basic Black"
         }
       ],
@@ -47,11 +47,11 @@
       "price": 149.9,
       "images": [
         {
-          "src": "assets/hoodie/black-1.png",
+          "src": "/assets/hoodie/black-1.png",
           "alt": "Hoodie Classic Black"
         },
         {
-          "src": "assets/hoodie/black-2.png",
+          "src": "/assets/hoodie/black-2.png",
           "alt": "Hoodie Classic Black"
         }
       ],
@@ -66,11 +66,11 @@
       "price": 159.9,
       "images": [
         {
-          "src": "assets/hoodie/grey-1.png",
+          "src": "/assets/hoodie/grey-1.png",
           "alt": "Hoodie Classic Grey"
         },
         {
-          "src": "assets/hoodie/grey-2.png",
+          "src": "/assets/hoodie/grey-2.png",
           "alt": "Hoodie Classic Grey"
         }
       ],
@@ -142,11 +142,11 @@
           "imageSetId": "imgSetWhite",
           "images": [
             {
-              "src": "assets/t-shirt/white-1.png",
+              "src": "/assets/t-shirt/white-1.png",
               "alt": "T-Shirt Basic White front"
             },
             {
-              "src": "assets/t-shirt/white-2.png",
+              "src": "/assets/t-shirt/white-2.png",
               "alt": "T-Shirt Basic White back"
             }
           ]
@@ -155,11 +155,11 @@
           "imageSetId": "imgSetBlack",
           "images": [
             {
-              "src": "assets/t-shirt/black-1.png",
+              "src": "/assets/t-shirt/black-1.png",
               "alt": "T-Shirt Basic Black front"
             },
             {
-              "src": "assets/t-shirt/black-2.png",
+              "src": "/assets/t-shirt/black-2.png",
               "alt": "T-Shirt Basic Black back"
             }
           ]
@@ -215,11 +215,11 @@
           "imageSetId": "imgSetHoodieBlack",
           "images": [
             {
-              "src": "assets/hoodie/black-1.png",
+              "src": "/assets/hoodie/black-1.png",
               "alt": "Hoodie Classic Black front"
             },
             {
-              "src": "assets/hoodie/black-2.png",
+              "src": "/assets/hoodie/black-2.png",
               "alt": "Hoodie Classic Black back"
             }
           ]
@@ -228,11 +228,11 @@
           "imageSetId": "imgSetHoodieGrey",
           "images": [
             {
-              "src": "assets/hoodie/grey-1.png",
+              "src": "/assets/hoodie/grey-1.png",
               "alt": "Hoodie Classic Grey front"
             },
             {
-              "src": "assets/hoodie/grey-2.png",
+              "src": "/assets/hoodie/grey-2.png",
               "alt": "Hoodie Classic Grey back"
             }
           ]
@@ -241,39 +241,5 @@
     }
   ],
   "cart": [
-    {
-      "id": "da35",
-      "productId": "1",
-      "variantId": "000004",
-      "name": "T-Shirt Basic",
-      "description": "A high-quality basic cotton t-shirt for everyday comfort.",
-      "image": {
-        "src": "assets/t-shirt/black-1.png",
-        "alt": "T-Shirt Basic Black front"
-      },
-      "price": 109.9,
-      "quantity": 2,
-      "values": {
-        "color": "Black",
-        "size": "S"
-      }
-    },
-    {
-      "id": "5c6d",
-      "productId": "2",
-      "variantId": "000010",
-      "name": "Hoodie Classic",
-      "description": "Warm and comfy hoodie made from premium cotton blend.",
-      "image": {
-        "src": "assets/hoodie/grey-1.png",
-        "alt": "Hoodie Classic Grey front"
-      },
-      "price": 159.9,
-      "quantity": 2,
-      "values": {
-        "color": "Grey",
-        "size": "L"
-      }
-    }
   ]
 }
