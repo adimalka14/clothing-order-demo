@@ -123,7 +123,6 @@ npm run build-storybook
 | [yup](https://github.com/jquense/yup)                                                               | Validation schema            |
 | [react-router-dom](https://reactrouter.com/)                                                        | Routing and navigation (SPA) |
 | [json-server](https://github.com/typicode/json-server)                                              | Mock REST API server         |
-| [axios](https://axios-http.com/)                                                                    | HTTP requests (optional use) |
 | [prop-types](https://www.npmjs.com/package/prop-types)                                              | Runtime props validation     |
 
 ### 🛠 Dev & Build Tools
